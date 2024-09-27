@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Nhúng Giống YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let video;
+
+        function playVideo() {
+            const videoContainer = document.getElementById("video-container");
+            videoContainer.innerHTML = ""; // Xóa hình thu nhỏ
+
+            video = document.createElement("iframe");
+            video.width = "640";
+            video.height = "360";
+            video.frameBorder = "0";
+            video.src = "https://mega.nz/embed/hzsxjKjZ#pvn-dSTAyH0u6UY95WgMH5qVEBQkoSpyyvBU2PqtnlU";
+            video.allowFullscreen = true;
+
+            videoContainer.appendChild(video);
+            setTimeout(() => {
+                const videoElement = video.contentWindow.document.querySelector('video');
+                if (videoElement) {
+                    // Tua tới 10 giây
+                    document.getElementById("forward").onclick = function() {
+                        videoElement.currentTime += 10;
+                    };
+                    // Tua lùi 10 giây
+                    document.getElementById("rewind").onclick = function() {
+                        videoElement.currentTime -= 10;
+                    };
+                }
+            }, 1000); // Đợi một chút để video được tải
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Trang 18+ XLXL.VN</h1>
+        </header>
+        <div class="video-container" id="video-container">
+            <img src="ảnh1.png" alt="Thumbnail" 
+                 class="thumbnail" onclick="playVideo()">
+        </div>
+        <div class="controls">
+            <button id="rewind">&#9664;&#9664;</button> <!-- Mũi tên lùi -->
+            <button id="forward">&#9654;&#9654;</button> <!-- Mũi tên tới -->
+        </div>
+        <div class="description">
+            <h2>Trần Ngọc Diễm Trang</h2>
+            <p>Im Lặng Bữa Giờ</p>
+        </div>
+    </div>
+</body>
+</html>

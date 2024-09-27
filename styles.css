@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Nền màu đen */
+    color: #fff; /* Chữ màu trắng */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #ff0000; /* Màu nền tiêu đề */
+    color: white; /* Chữ tiêu đề màu trắng */
+    padding: 10px;
+    text-align: center;
+}
+
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#video {
+    width: 100%; /* Chiều rộng video 100% */
+    max-width: 640px; /* Chiều rộng tối đa */
+    height: 360px; /* Chiều cao video */
+}
+
+.controls {
+    display: flex; /* Sử dụng flexbox cho các nút */
+    justify-content: center; /* Căn giữa các nút */
+    margin: 20px 0;
+}
+
+.controls button {
+    background-color: #ff0000; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em; /* Kích thước chữ nút */
+}
+
+.controls button:hover {
+    background-color: #d00000; /* Màu nền nút khi hover */
+}
+
+.description {
+    background-color: #222; /* Nền mô tả video */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries cho màn hình nhỏ */
+@media (max-width: 640px) {
+    .header {
+        font-size: 1.5em; /* Kích thước chữ tiêu đề nhỏ hơn trên điện thoại */
+    }
+
+    .controls button {
+        padding: 8px 16px; /* Điều chỉnh kích thước nút */
+        font-size: 0.9em; /* Kích thước chữ nút nhỏ hơn trên điện thoại */
+    }
+
+    .description {
+        font-size: 0.9em; /* Kích thước chữ mô tả nhỏ hơn trên điện thoại */
+    }
+}
