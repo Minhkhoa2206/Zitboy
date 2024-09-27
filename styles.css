@@ -1,4 +1,5 @@
 body {
+    zoom:70%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -72,4 +73,19 @@ body {
     .description {
         font-size: 0.9em; /* Kích thước chữ mô tả nhỏ hơn trên điện thoại */
     }
+}
+
+
+.donate-button {
+    display: inline-block;
+    background-color: #ff0000; /* Màu nền nút Donate */
+    color: white; /* Màu chữ nút */
+    padding: 10px 20px;
+    text-decoration: none; /* Bỏ gạch chân */
+    border-radius: 5px; /* Bo góc nút */
+    margin-top: 10px; /* Khoảng cách trên nút */
+}
+
+.donate-button:hover {
+    background-color: #d00000; /* Màu nền khi hover */
 }
