@@ -1,91 +1,138 @@
-body {
-    zoom:70%;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #000; /* Nền màu đen */
-    color: #fff; /* Chữ màu trắng */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text for contrast */
 }
 
 .container {
-    max-width: 800px;
+    max-width: 800px; /* Max width for content */
     margin: 0 auto;
     padding: 20px;
 }
 
 .header {
-    background-color: #ff0000; /* Màu nền tiêu đề */
-    color: white; /* Chữ tiêu đề màu trắng */
-    padding: 10px;
+    background-color: #1f1f1f; /* Darker header background */
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
 }
 
-.video-container {
-    margin: 20px 0;
-    text-align: center;
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
-
-#video {
-    width: 100%; /* Chiều rộng video 100% */
-    max-width: 640px; /* Chiều rộng tối đa */
-    height: 360px; /* Chiều cao video */
-}
-
-.controls {
-    display: flex; /* Sử dụng flexbox cho các nút */
-    justify-content: center; /* Căn giữa các nút */
-    margin: 20px 0;
-}
-
-.controls button {
-    background-color: #ff0000; /* Màu nền nút */
-    color: white; /* Màu chữ nút */
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em; /* Kích thước chữ nút */
-}
-
-.controls button:hover {
-    background-color: #d00000; /* Màu nền nút khi hover */
-}
-
-.description {
-    background-color: #222; /* Nền mô tả video */
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-}
-
-/* Media Queries cho màn hình nhỏ */
-@media (max-width: 640px) {
-    .header {
-        font-size: 1.5em; /* Kích thước chữ tiêu đề nhỏ hơn trên điện thoại */
-    }
-
-    .controls button {
-        padding: 8px 16px; /* Điều chỉnh kích thước nút */
-        font-size: 0.9em; /* Kích thước chữ nút nhỏ hơn trên điện thoại */
-    }
-
-    .description {
-        font-size: 0.9em; /* Kích thước chữ mô tả nhỏ hơn trên điện thoại */
-    }
-}
-
 
 .donate-button {
     display: inline-block;
-    background-color: #ff0000; /* Màu nền nút Donate */
-    color: white; /* Màu chữ nút */
+    background-color: #ff3d00; /* Bright accent color */
+    color: #fff;
     padding: 10px 20px;
-    text-decoration: none; /* Bỏ gạch chân */
-    border-radius: 5px; /* Bo góc nút */
-    margin-top: 10px; /* Khoảng cách trên nút */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .donate-button:hover {
-    background-color: #d00000; /* Màu nền khi hover */
+    background-color: #ff5722; /* Darker shade on hover */
+}
+
+.video-container {
+    width: 100%;
+    height: 360px; /* Fixed height for video */
+    background-color: #000; /* Black background for video area */
+    margin: 20px 0; /* Margin for spacing */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+}
+
+.video-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+}
+
+.info-section {
+    background-color: #1f1f1f; /* Darker background for info section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding around content */
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 24px; /* Title font size */
+    margin-bottom: 10px; /* Margin below title */
+}
+
+.movie-description {
+    font-size: 18px; /* Description font size */
+    color: #aaaaaa; /* Lighter text for description */
+}
+
+.footer {
+    margin-top: 20px; /* Margin above footer */
+    text-align: center; /* Centered text */
+}
+
+.footer p {
+    font-size: 14px; /* Footer font size */
+    color: #aaaaaa; /* Lighter footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .donate-button {
+        padding: 8px 16px;
+    }
+
+    .info-section {
+        padding: 10px;
+    }
+
+    .movie-title {
+        font-size: 22px;
+    }
+
+    .movie-description {
+        font-size: 16px;
+    }
+
+    .video-container {
+        height: 240px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .donate-button {
+        padding: 6px 12px;
+    }
+
+    .info-section {
+        padding: 8px;
+    }
+
+    .movie-title {
+        font-size: 20px;
+    }
+
+    .movie-description {
+        font-size: 14px;
+    }
+
+    .video-container {
+        height: 180px; /* Adjust height for mobile screens */
+    }
 }

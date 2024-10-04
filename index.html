@@ -3,58 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gửi Cho Diễm Trang</title>
+    <title>XLXL-damdang.vn</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        let video;
-
-        function playVideo() {
-            const videoContainer = document.getElementById("video-container");
-            videoContainer.innerHTML = ""; // Xóa hình thu nhỏ
-
-            video = document.createElement("iframe");
-            video.width = "640";
-            video.height = "360";
-            video.frameBorder = "0";
-            video.src = "https://mega.nz/embed/hzsxjKjZ#pvn-dSTAyH0u6UY95WgMH5qVEBQkoSpyyvBU2PqtnlU";
-            video.allowFullscreen = true;
-
-            videoContainer.appendChild(video);
-            setTimeout(() => {
-                const videoElement = video.contentWindow.document.querySelector('video');
-                if (videoElement) {
-                    // Tua tới 10 giây
-                    document.getElementById("forward").onclick = function() {
-                        videoElement.currentTime += 10;
-                    };
-                    // Tua lùi 10 giây
-                    document.getElementById("rewind").onclick = function() {
-                        videoElement.currentTime -= 10;
-                    };
-                }
-            }, 1000); // Đợi một chút để video được tải
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Trang 18+ XLXL.VN ( Hello bà Già )</h1>
+            <h1>Trang 18+ XLXL.VN</h1>
             <a href="https://www.xaydungminhkhoa.online/thanhtoan/thanhtoan.html" 
-               class="donate-button" target="_blank"> Nhấn Vào Đây Để Lấy Phương Thức Chuyển Khoản</a> <!-- Mục Donate -->
+               class="donate-button" target="_blank">Nhấn Vào Đây Để Lấy Phương Thức Chuyển Khoản</a>
         </header>
-        <div class="video-container" id="video-container">
-            <img src="ảnh1.jpg" alt="Thumbnail" 
-                 class="thumbnail" onclick="playVideo()">
+        <div class="video-container">
+            <iframe src="https://mega.nz/embed/hzsxjKjZ#pvn-dSTAyH0u6UY95WgMH5qVEBQkoSpyyvBU2PqtnlU" 
+                    frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="controls">
-            <button id="rewind">&#9664;&#9664;</button> <!-- Mũi tên lùi -->
-            <button id="forward">&#9654;&#9654;</button> <!-- Mũi tên tới -->
+        <div class="info-section">
+            <h2 class="movie-title">Video Gửi Đến Diễm Trang</h2>
+            <p class="movie-description">Video Gửi Đến Diễm Trang</p>
         </div>
-        <div class="description">
-            <h2>Trần Ngọc Diễm Trang</h2>
-            <p>Im Lặng Bữa Giờ</p>
-        </div>
+        <footer class="footer">
+            <p>&copy; 2024 XLXL.VN. Tất cả quyền được bảo lưu.</p>
+        </footer>
     </div>
 </body>
 </html>
